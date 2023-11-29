@@ -382,7 +382,7 @@
     width: 100%;
   }
   
-  /*  tablet responsive desigen */
+  /*  desktop responsive desigen */
   @media only screen and (min-width: 600px) {
     header nav {
       flex-direction: row;
@@ -448,9 +448,6 @@
       bottom: 0;
       display: block;
     }
-  }
-  /*  Desctop responsive desigen */
-  @media only screen and (min-width: 800px) {
     #home-main-section-2 {
       max-width: 100%;
       text-align: left;
