@@ -1,0 +1,461 @@
+/* resette til default */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+  }
+  /* felles body på alle sider */
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    max-width: 1600px;
+    margin: auto;
+  }
+  /* felles header på alle sider */
+  header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  /* felles nav på alle sider */
+  header nav {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header nav button img {
+    width: 100px;
+  }
+  /* skal settes til row i desktop version */
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+  }
+  header nav ul li a {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    margin: 10px;
+  }
+  /* skal brukes til å sjille mellom aktive side */
+  .active {
+    border-bottom: 2px solid #e6bd43;
+    font-weight: bold;
+  }
+  
+  /* brukkes på alle knapper i webside */
+  .button {
+    display: inline-block;
+    background-color: #e6bd43;
+    font-weight: bold;
+    padding: 10px;
+    margin: 0;
+    margin-top: 5px;
+    color: #000;
+    text-decoration: none;
+    border: none;
+  }
+  .button2 {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid #000000;
+  }
+  
+  /* skal viser text over video over bilde */
+  #hoved-banner {
+    width: 100%;
+    height: 420px;
+    position: relative;
+  }
+  
+  #hoved-banner img,
+  #hoved-banner video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  #hoved-banner video {
+    z-index: 1;
+    display: none;
+  }
+  
+  .hoved-banner-article {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+  }
+  /* i tellig til class button */
+  .hoved-banner-article button {
+    margin-top: 10px;
+  }
+  #about-banner-article {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    transform: none;
+    padding: 5px;
+    background-color: #fffffff1;
+    position: absolute;
+    z-index: 2;
+  }
+  #portfolio-banner-article {
+    position: absolute;
+    z-index: 3;
+    color: #000000;
+    background-color: #ffffff7e;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*  article skal ikke blir større enn 692px */
+  article {
+    max-width: 692px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 10px;
+  }
+  /*  responsiv som mobile først stratigi */
+  footer {
+    grid-area: footer;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    list-style: none;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  footer ul li {
+    list-style: none;
+  }
+  /* ikoner */
+  footer ul li a {
+    margin: 5px;
+    color: white;
+    font-size: 1.5em;
+  }
+  #scrollToTopBtn {
+    z-index: 100;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Additional styling for the button */
+    padding: 10px;
+    background-color: #252525;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #home-main {
+    grid-area: main;
+  }
+  #home-main section {
+    display: flex;
+    margin: auto;
+    padding: 50px;
+  }
+  #home-main-section-1 article {
+    display: grid;
+    gap: 30px;
+    margin: auto;
+    padding: 0;
+    max-width: 692px;
+    text-align: center;
+  }
+  #home-main-section-2 {
+    background-color: #e6bd43;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto;
+    padding: 0 50px;
+    max-width: 692px;
+    text-align: center;
+    justify-items: center;
+  
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+  #home-main-section-2 img {
+    max-width: 90%;
+  }
+  #section--ome-our-clients {
+    background-color: #e6bd43;
+  }
+  #section-our-services,
+  #section--ome-our-clients {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+  #section-our-services h1,
+  #section--ome-our-clients h1 {
+    margin: 20px 0 40px 0;
+  }
+  #section-our-services div,
+  #section--ome-our-clients article {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  #section-our-services div article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 200px;
+  }
+  
+  #section-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #eeeeee;
+  }
+  #section-our-services div article i {
+    font-size: 3em;
+  }
+  #section-newsletter form {
+    display: block;
+  }
+  #section-newsletter form input {
+    background-color: #fff;
+    margin: 0;
+    padding: 15px;
+  }
+  #section-newsletter form button {
+    margin: 0;
+    padding: 15px;
+  }
+  #section-contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #section-contact-us h2 {
+    text-align: center;
+  }
+  #section-contact-us div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #section-contact-us div article {
+    display: flex;
+    flex-direction: column;
+  }
+  #section-contact-us div article input,
+  #section-contact-us div article textarea {
+    border: none;
+    background-color: white;
+  }
+  
+  #section-contact-us div article button {
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+  }
+  .p-y {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .p-x {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #section-contact-us {
+    background-color: #eeeeee;
+  }
+  
+  #section-contact-us div article address span {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+    color: #252525;
+    padding: 10px 0;
+  }
+  #section-contact-us div article address span i {
+    font-size: 1.5em;
+    color: #252525c1;
+  }
+  
+  #Portfolio-main {
+    grid-area: main;
+    display: flexbox;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  #Portfolio-main h2 {
+    margin: 30px 20px;
+    border-bottom: 4px solid #e6bd43;
+    text-align: start;
+    padding: 10px 0;
+  }
+  #Portfolio-main nav {
+    text-align: start;
+  
+    list-style: none;
+  }
+  #Portfolio-main nav ul {
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+  #Portfolio-main nav ul li {
+    text-align: start;
+    margin: 10px;
+    list-style: none;
+    width: min-content;
+  }
+  #Portfolio-main nav ul li a {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000000;
+    text-decoration: none;
+  }
+  #Portfolio-main section div {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  #Portfolio-main section div article {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 692px;
+    margin: 10px;
+    justify-self: center;
+    flex-grow: 10;
+  }
+  
+  #Portfolio-main section div article h3 {
+    text-align: left;
+    margin: 10px 0;
+  }
+  #Portfolio-main section div article img {
+    width: 100%;
+  }
+  
+  /*  tablet responsive desigen */
+  @media only screen and (min-width: 600px) {
+    header nav {
+      flex-direction: row;
+    }
+    header nav ul {
+      flex-direction: row;
+      margin-left: auto;
+    }
+    #logo {
+      float: left;
+    }
+    .button {
+      margin-top: 0;
+      z-index: 5;
+    }
+    .button:hover,
+    .button2:hover,
+    #Portfolio-main nav ul li a:hover {
+      background-color: #252525;
+      color: #e6bd43;
+    }
+  
+    .hoved-banner-article button {
+      text-align: center;
+    }
+  
+    footer {
+      flex-direction: row;
+      gap: 20px;
+    }
+    #about-banner-article {
+      left: 20px;
+      right: 20px;
+      bottom: auto;
+      padding: 40px;
+      text-align: start;
+      margin-left: auto;
+    }
+    #section-contact-us div {
+      flex-direction: row;
+    }
+    #section-contact-us div article {
+      width: 50%;
+      margin: 10px;
+    }
+    #Portfolio-main section div {
+      justify-content: left;
+    }
+    #Portfolio-main section div article img:hover {
+      transform: scale(110%);
+      transition: transform 2s;
+    }
+    #hoved-banner video {
+      display: block;
+    }
+    #background-over {
+      background-color: #ffffff75;
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+    }
+  }
+  /*  Desctop responsive desigen */
+  @media only screen and (min-width: 800px) {
+    #home-main-section-2 {
+      max-width: 100%;
+      text-align: left;
+      justify-items: left;
+      flex-direction: row;
+    }
+  }
+  
