@@ -47,9 +47,7 @@
             dolores et quas molestias excepturi sint occaecati cupiditate non
             provident
           </p>
-          <a class="button" href="#section-our-services"
-            >Read More about Our Services</a
-          >
+          <a class="button" href="#section-our-services">Read More about Our Services</a>
         </article>
 
         <video width="320" height="240" autoplay muted>
@@ -60,22 +58,22 @@
       </section>
     </header>
     <main id="home-main">
-      <section id="home-main-section-1">
+      <section id="home-main-section-1" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
         <article>
-          <h2>Enganging subheading. What can you help your visitors with</h2>
-          <p>
+          <h2 itemprop="name"">Enganging subheading. What can you help your visitors with</h2>
+          <p itemprop="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris
           </p>
         </article>
       </section>
-      <section id="home-main-section-2">
-        <img src="img/placeholder.jpg" alt="pic placeholder">
+      <section id="home-main-section-2" itemscope itemtype="https://schema.org/Organization">
+        <img src="img/placeholder.jpg" alt="pic placeholder" itemprop="image">
 
         <div>
-          <h2>About Our Company</h2>
-          <p>
+          <h2 itemprop="name">About Our Company</h2>
+          <p itemprop="description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -83,25 +81,25 @@
           <a class="button2" href="about.html">Read More about Us</a>
         </div>
       </section>
-      <section id="section-our-services">
+      <section id="section-our-services" itemscope itemtype="https://schema.org/Service">
         <h1>Our services</h1>
         <div>
-          <article>
+          <article itemprop="serviceType"  content="Branding">
             <i class="fa-solid fa-users"></i>
             <h2>Branding</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </article>
-          <article>
+          <article itemprop="serviceType"  content="Design">
             <i class="fa-solid fa-cloud-arrow-up"></i>
             <h2>Design</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </article>
-          <article>
+          <article itemprop="serviceType"  content="Developmant">
             <i class="fa-solid fa-code"></i>
             <h2>Develpment</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </article>
-          <article>
+          <article itemprop="serviceType"  content="support">
             <i class="fa-solid fa-wifi"></i>
             <h2>Support</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
